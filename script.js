@@ -1,22 +1,26 @@
-// Smooth scroll with offset fix
+// Smooth scroll with offset fix (safe version)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
-        e.preventDefault();
 
         const targetId = this.getAttribute("href");
         const target = document.querySelector(targetId);
 
-        const offset = 100; // adjust if needed
+        // Only apply smooth scroll if target exists
+        if (target) {
+            e.preventDefault();
 
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = target.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
+            const offset = 100; // adjust if needed
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = target.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
     });
 });
 
