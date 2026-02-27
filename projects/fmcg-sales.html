@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FMCG Daily Sales Analysis | ASK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="project-nav">
+    <div class="container nav-container">
+
+        <h2 class="logo">
+            <a href="../index.html">
+                <span class="logo-accent">A</span>SK
+            </a>
+        </h2>
+
+        <a href="../index.html" class="back-btn">
+        ← Back to Portfolio
+        </a>
+
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="project-hero-section">
+    <div class="container">
+
+        <h1>FMCG Daily Sales Analysis</h1>
+
+        <p class="project-subtitle">
+            Exploratory Data Analysis on 190K+ retail sales records 
+            to uncover revenue drivers, promotion impact, and operational efficiency insights.
+        </p>
+
+        <div class="project-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Matplotlib</span>
+            <span>Seaborn</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= MAIN PROJECT CONTENT ================= -->
+<section class="project-detail-section">
+    <div class="container">
+
+        <div class="project-card">
+
+            <!-- Overview -->
+            <div class="project-section">
+                <h3>Project Overview</h3>
+                <p>
+                    This project analyzes 190,000+ daily FMCG sales records including 
+                    product, region, pricing, promotion, and stock data to identify 
+                    revenue drivers and operational performance patterns.
+                </p>
+            </div>
+
+            <!-- Objective -->
+            <div class="project-section">
+                <h3>Objective</h3>
+                <p>
+                    Identify sales trends, product performance drivers, and measure the 
+                    impact of promotions, pricing strategies, and stock availability.
+                </p>
+            </div>
+
+            <!-- Data Engineering -->
+            <div class="project-section">
+                <h3>Data Engineering</h3>
+                <p>
+                    Handled missing values, removed duplicates, corrected data types, 
+                    engineered new features such as revenue and delivery efficiency, 
+                    and extracted time-based attributes to enhance analysis quality.
+                </p>
+            </div>
+
+            <!-- Key Insights -->
+            <div class="project-section">
+                <h3>Key Insights</h3>
+                <ul>
+                    <li>Sales distribution is right-skewed, indicating high-volume outliers.</li>
+                    <li>Promotions impacted ~15% of sales but showed strong performance variation.</li>
+                    <li>Revenue trends reveal seasonal fluctuations across regions.</li>
+                    <li>Stock and delivery efficiency strongly influence fulfillment performance.</li>
+                </ul>
+            </div>
+
+            <!-- KPI Section -->
+            <h3 class="section-title">Key Performance Indicators</h3>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h4>Total Revenue</h4>
+                    <p>₹ 9.8M</p>
+                </div>
+
+                <div class="kpi-card">
+                    <h4>Total Units Sold</h4>
+                    <p>1.2M</p>
+                </div>
+
+                <div class="kpi-card">
+                    <h4>Promotion Sales %</h4>
+                    <p>15%</p>
+                </div>
+
+                <div class="kpi-card">
+                    <h4>Avg Delivery Efficiency</h4>
+                    <p>92%</p>
+                </div>
+            </div>
+
+            <!-- Visual Insights -->
+            <h3 class="section-title">Visual Insights</h3>
+
+            <div class="chart-grid">
+                <div class="chart-card half">
+                    <h4>Monthly Revenue Trend</h4>
+                    <canvas id="revenueTrend"></canvas>
+                </div>
+
+                <div class="chart-card half">
+                    <h4>Revenue by Channel</h4>
+                    <canvas id="channelRevenue"></canvas>
+                </div>
+
+                <div class="chart-card full">
+                    <h4>Promotion Impact</h4>
+                    <canvas id="promotionImpact"></canvas>
+                </div>
+            </div>
+
+            <!-- GitHub Button -->
+            <div class="github-section">
+                <a href="https://github.com/anirudhsk01/fmcg-daily-sales-data-2022-2024"
+                   target="_blank"
+                   class="btn">
+                   🔗 View Full Code on GitHub
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

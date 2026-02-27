@@ -67,55 +67,54 @@ window.addEventListener("load", () => {
 });
 
 
-// --------------------
-// FMCG Revenue Trend
-// --------------------
-const revenueTrendCtx = document.getElementById('revenueTrend');
+// ==============================
+// FMCG Revenue Trend (Line Chart)
+// ==============================
+const revenueCanvas = document.getElementById("revenueTrend");
 
-if (revenueTrendCtx) {
-    new Chart(revenueTrendCtx, {
-        type: 'line',
+if (revenueCanvas) {
+    new Chart(revenueCanvas, {
+        type: "line",
         data: {
-            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
             datasets: [{
-                label: 'Monthly Revenue',
+                label: "Monthly Revenue",
                 data: [120000,140000,135000,150000,160000,170000,165000,180000,190000,200000,210000,220000],
-                borderColor: '#1f3c88',
-                backgroundColor: 'rgba(31,60,136,0.1)',
+                borderColor: "#1f3c88",
+                backgroundColor: "rgba(31,60,136,0.1)",
                 fill: true,
                 tension: 0.3,
-                pointRadius: 5,
-                pointHoverRadius: 8
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                borderWidth: 2
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             interaction: {
-                mode: 'index',
-                intersect: false
-            },
-            hover: {
-                mode: 'index',
+                mode: "index",
                 intersect: false
             },
             plugins: {
                 tooltip: {
-                    enabled: true,
-                    mode: 'index',
-                    intersect: false,
-                    backgroundColor: '#1f3c88',
-                    titleColor: '#fff',
-                    bodyColor: '#fff',
+                    backgroundColor: "#1f3c88",
+                    titleColor: "#fff",
+                    bodyColor: "#fff",
                     padding: 10
+                },
+                legend: {
+                    display: true,
+                    labels: {
+                        color: "#333"
+                    }
                 }
             },
             scales: {
                 y: {
                     beginAtZero: false,
                     ticks: {
-                        callback: function(value) {
-                            return '₹ ' + value.toLocaleString();
-                        }
+                        callback: (value) => "₹ " + value.toLocaleString()
                     }
                 }
             }
@@ -123,38 +122,62 @@ if (revenueTrendCtx) {
     });
 }
 
-// --------------------
-// Revenue by Channel
-// --------------------
-const channelCtx = document.getElementById('channelRevenue');
+
+// ==============================
+// Revenue by Channel (Bar Chart)
+// ==============================
+const channelCtx = document.getElementById("channelRevenue");
+
 if (channelCtx) {
     new Chart(channelCtx, {
-        type: 'bar',
+        type: "bar",
         data: {
-            labels: ['Retail','Wholesale','Online'],
+            labels: ["Retail","Wholesale","Online"],
             datasets: [{
-                label: 'Revenue',
+                label: "Revenue",
                 data: [450000, 300000, 250000],
-                backgroundColor: ['#1f3c88','#3f72af','#112d4e']
+                backgroundColor: ["#1f3c88","#3f72af","#112d4e"],
+                borderRadius: 6
             }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true
+                }
+            }
         }
     });
 }
 
-// --------------------
-// Promotion Impact
-// --------------------
-const promoCtx = document.getElementById('promotionImpact');
+
+// ==============================
+// Promotion Impact (Bar Chart)
+// ==============================
+const promoCtx = document.getElementById("promotionImpact");
+
 if (promoCtx) {
     new Chart(promoCtx, {
-        type: 'bar',
+        type: "bar",
         data: {
-            labels: ['No Promotion','Promotion'],
+            labels: ["No Promotion","Promotion"],
             datasets: [{
-                label: 'Total Revenue',
+                label: "Total Revenue",
                 data: [800000, 250000],
-                backgroundColor: ['#888','#1f3c88']
+                backgroundColor: ["#888","#1f3c88"],
+                borderRadius: 6
             }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true
+                }
+            }
         }
     });
 }
