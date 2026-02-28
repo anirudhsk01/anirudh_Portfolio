@@ -80,12 +80,12 @@ if (revenueCanvas) {
     new Chart(revenueCanvas, {
         type: "line",
         data: {
-            labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [{
                 label: "Monthly Revenue",
-                data: [120000,140000,135000,150000,160000,170000,165000,180000,190000,200000,210000,220000],
-                borderColor: "#1f3c88",
-                backgroundColor: "rgba(31,60,136,0.1)",
+                data: [120000, 140000, 135000, 150000, 160000, 170000, 165000, 180000, 190000, 200000, 210000, 220000],
+                borderColor: "#0284c7",
+                backgroundColor: "rgba(2,132,199,0.1)",
                 fill: true,
                 tension: 0.3,
                 pointRadius: 4,
@@ -110,16 +110,22 @@ if (revenueCanvas) {
                 legend: {
                     display: true,
                     labels: {
-                        color: "#333"
+                        color: "#94a3b8"
                     }
                 }
             },
             scales: {
+                x: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                },
                 y: {
                     beginAtZero: false,
                     ticks: {
+                        color: '#94a3b8',
                         callback: (value) => "₹ " + value.toLocaleString()
-                    }
+                    },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
                 }
             }
         }
@@ -136,11 +142,11 @@ if (channelCtx) {
     new Chart(channelCtx, {
         type: "bar",
         data: {
-            labels: ["Retail","Wholesale","Online"],
+            labels: ["Retail", "Wholesale", "Online"],
             datasets: [{
                 label: "Revenue",
                 data: [450000, 300000, 250000],
-                backgroundColor: ["#1f3c88","#3f72af","#112d4e"],
+                backgroundColor: ["#0284c7", "#14b8a6", "#38bdf8"],
                 borderRadius: 6
             }]
         },
@@ -149,7 +155,18 @@ if (channelCtx) {
             maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    display: true
+                    display: true,
+                    labels: { color: "#94a3b8" }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { display: false }
+                },
+                y: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
                 }
             }
         }
@@ -166,11 +183,11 @@ if (promoCtx) {
     new Chart(promoCtx, {
         type: "bar",
         data: {
-            labels: ["No Promotion","Promotion"],
+            labels: ["No Promotion", "Promotion"],
             datasets: [{
                 label: "Total Revenue",
                 data: [800000, 250000],
-                backgroundColor: ["#888","#1f3c88"],
+                backgroundColor: ["#94a3b8", "#0284c7"],
                 borderRadius: 6
             }]
         },
@@ -179,7 +196,18 @@ if (promoCtx) {
             maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    display: true
+                    display: true,
+                    labels: { color: "#94a3b8" }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { display: false }
+                },
+                y: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
                 }
             }
         }

@@ -1,216 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>FMCG Daily Sales Analysis | ASK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    
+
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="project-nav">
-    <div class="container nav-container">
-
-        <h2 class="logo">
-            <a href="../index.html">
-                <span class="logo-accent">A</span>SK
-            </a>
-        </h2>
-
-        <a href="../index.html" class="back-btn">
-        ← Back to Portfolio
-        </a>
-
-    </div>
-</nav>
-
-
-<!-- ================= HERO ================= -->
-<section class="project-hero-section">
-    <div class="container">
-
-        <h1>FMCG Daily Sales Analysis</h1>
-
-        <p class="project-subtitle">
-            Exploratory Data Analysis on 190K+ retail sales records 
-            to uncover revenue drivers, promotion impact, and operational efficiency insights.
-        </p>
-
-        <div class="project-tags">
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>Matplotlib</span>
-            <span>Seaborn</span>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- ================= MAIN PROJECT CONTENT ================= -->
-<section class="project-detail-section">
-    <div class="container">
-
-        <div class="project-card">
-
-            <!-- Overview -->
-            <div class="project-section">
-                <h3>Project Overview</h3>
-                <p>
-                    This project analyzes 190,000+ daily FMCG sales records including 
-                    product, region, pricing, promotion, and stock data to identify 
-                    revenue drivers and operational performance patterns.
-                </p>
-            </div>
-
-            <!-- Objective -->
-            <div class="project-section">
-                <h3>Objective</h3>
-                <p>
-                    Identify sales trends, product performance drivers, and measure the 
-                    impact of promotions, pricing strategies, and stock availability.
-                </p>
-            </div>
-
-            <!-- Data Engineering -->
-            <div class="project-section">
-                <h3>Data Engineering</h3>
-                <p>
-                    Handled missing values, removed duplicates, corrected data types, 
-                    engineered new features such as revenue and delivery efficiency, 
-                    and extracted time-based attributes to enhance analysis quality.
-                </p>
-            </div>
-
-            <!-- Key Insights -->
-            <div class="project-section">
-                <h3>Key Insights</h3>
-                <ul>
-                    <li>Sales distribution is right-skewed, indicating high-volume outliers.</li>
-                    <li>Promotions impacted ~15% of sales but showed strong performance variation.</li>
-                    <li>Revenue trends reveal seasonal fluctuations across regions.</li>
-                    <li>Stock and delivery efficiency strongly influence fulfillment performance.</li>
-                </ul>
-            </div>
-
-            <!-- KPI Section -->
-            <h3 class="section-title">Key Performance Indicators</h3>
-
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <h4>Total Revenue</h4>
-                    <p>₹ 9.8M</p>
-                </div>
-
-                <div class="kpi-card">
-                    <h4>Total Units Sold</h4>
-                    <p>1.2M</p>
-                </div>
-
-                <div class="kpi-card">
-                    <h4>Promotion Sales %</h4>
-                    <p>15%</p>
-                </div>
-
-                <div class="kpi-card">
-                    <h4>Avg Delivery Efficiency</h4>
-                    <p>92%</p>
-                </div>
-            </div>
-
-            <!-- Visual Insights -->
-            <h3 class="section-title">Visual Insights</h3>
-
-            <div class="chart-grid">
-                <div class="chart-card half">
-                    <h4>Monthly Revenue Trend</h4>
-                    <canvas id="revenueTrend"></canvas>
-                </div>
-
-                <div class="chart-card half">
-                    <h4>Revenue by Channel</h4>
-                    <canvas id="channelRevenue"></canvas>
-                </div>
-
-                <div class="chart-card full">
-                    <h4>Promotion Impact</h4>
-                    <canvas id="promotionImpact"></canvas>
-                </div>
-            </div>
-
-            <!-- GitHub Button -->
-            <div class="github-section">
-                <a href="https://github.com/anirudhsk01/fmcg-daily-sales-data-2022-2024"
-                   target="_blank"
-                   class="btn">
-                   🔗 View Full Code on GitHub
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+        <div class="container nav-container">
+            <h2 class="logo">
+                <a href="../index.html">
+                    <span class="logo-accent">A</span>SK
                 </a>
+            </h2>
+
+            <div class="nav-links-container" style="display: flex; align-items: center;">
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="../assets/resume/Anirudh_SK_Resume.pdf" class="nav-resume-btn" download="Anirudh_SK_Resume.pdf"
+                    style="margin-left: 25px; color: #fff; background: var(--accent-blue); padding: 8px 18px; border-radius: 6px; font-weight: 600; text-decoration: none;">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="project-hero-section">
+        <div class="container">
+
+            <h1>FMCG Daily Sales Analysis</h1>
+
+            <p class="project-subtitle">
+                Exploratory Data Analysis on 190K+ retail sales records
+                to uncover revenue drivers, promotion impact, and operational efficiency insights.
+            </p>
+
+            <div class="project-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
             </div>
 
         </div>
-
-    </div>
-</section>
+    </section>
 
 
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../script.js"></script>
+    <!-- ================= MAIN PROJECT CONTENT ================= -->
+    <section class="project-detail-section">
+        <div class="container">
 
+            <div class="project-card">
 
-<footer class="project-footer">
+                <!-- Overview -->
+                <div class="project-section">
+                    <h3>Project Overview</h3>
+                    <p>
+                        This project performs an in depth exploratory data analysis on 190,000+ FMCG daily sales records
+                        to identify revenue drivers, evaluate promotional effectiveness, and uncover operational
+                        inefficiencies impacting performance across regions.
+                    </p>
+                </div>
 
-    <div class="project-footer-container">
+                <!-- Objective -->
+                <div class="project-section">
+                    <h3>Objective</h3>
+                    <p>
+                        Identify sales trends, product performance drivers, and measure the
+                        impact of promotions, pricing strategies, and stock availability.
+                    </p>
+                </div>
 
-        <!-- Clickable Logo -->
-        <div class="footer-brand">
-            <a href="../index.html" class="footer-logo">
-                <span class="logo-accent">A</span>SK
-            </a>
+                <!-- Data Engineering -->
+                <div class="project-section">
+                    <h3>Data Engineering</h3>
+                    <p>
+                        Handled missing values, removed duplicates, corrected data types,
+                        engineered new features such as revenue and delivery efficiency,
+                        and extracted time-based attributes to enhance analysis quality.
+                    </p>
+                </div>
+
+                <!-- Key Insights -->
+                <div class="project-section">
+                    <h3>Key Insights</h3>
+                    <ul>
+                        <li>Sales distribution is right-skewed, indicating high-volume outliers.</li>
+                        <li>Promotions impacted ~15% of sales but showed strong performance variation.</li>
+                        <li>Revenue trends reveal seasonal fluctuations across regions.</li>
+                        <li>Stock and delivery efficiency strongly influence fulfillment performance.</li>
+                    </ul>
+                </div>
+
+                <!-- KPI Section -->
+                <h3 class="section-title">Key Performance Indicators</h3>
+
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <h4>Total Revenue</h4>
+                        <p>₹ 9.8M</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h4>Total Units Sold</h4>
+                        <p>1.2M</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h4>Promotion Sales %</h4>
+                        <p>15%</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h4>Avg Delivery Efficiency</h4>
+                        <p>92%</p>
+                    </div>
+                </div>
+
+                <!-- Visual Insights -->
+                <h3 class="section-title">Visual Insights</h3>
+
+                <div class="chart-grid">
+                    <div class="chart-card half">
+                        <h4>Monthly Revenue Trend</h4>
+                        <canvas id="revenueTrend"></canvas>
+                    </div>
+
+                    <div class="chart-card half">
+                        <h4>Revenue by Channel</h4>
+                        <canvas id="channelRevenue"></canvas>
+                    </div>
+
+                    <div class="chart-card full">
+                        <h4>Promotion Impact</h4>
+                        <canvas id="promotionImpact"></canvas>
+                    </div>
+                </div>
+
+                <!-- GitHub Button -->
+                <div class="github-section">
+                    <a href="https://github.com/anirudhsk01/fmcg-daily-sales-data-2022-2024" target="_blank"
+                        class="btn">
+                        🔗 View Full Code on GitHub
+                    </a>
+                </div>
+
+            </div>
+
         </div>
+    </section>
 
-        <!-- Clickable Contact Icons -->
-        <div class="footer-links">
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anirudhsk555@gmail.com"
-   target="_blank"
-   title="Send Email">
-    <i class="fas fa-envelope"></i>
-</a>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../script.js"></script>
 
-            <a href="tel:+919809173284" title="Phone">
-                <i class="fas fa-phone"></i>
-            </a>
 
-            <a href="https://www.linkedin.com/in/anirudh-s-k-23128b272/" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
 
-            <a href="https://github.com/anirudhsk01" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
+            <h2 class="center">Contact</h2>
 
-            <a href="https://www.google.com/maps/place/Kerala,+India" 
-            target="_blank" 
-            title="Kerala, India">
-            <i class="fas fa-location-dot"></i>
-             </a>
+            <div class="contact-grid">
+
+                <div class="contact-box">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anirudhsk555@gmail.com" target="_blank"
+                        class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>anirudhsk555@gmail.com</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="tel:+91 9809173284" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+91 9809173284</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="https://www.linkedin.com/in/anirudh-s-k-23128b272/" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p>View Profile</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="https://github.com/anirudhsk01" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p>View Projects</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="https://www.google.com/maps/place/Kerala,+India" target="_blank" class="contact-link">
+                        <i class="fas fa-location-dot"></i>
+                        <h4>Location</h4>
+                        <p>Kerala, India</p>
+                    </a>
+                </div>
+            </div>
 
         </div>
+    </section>
 
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="center">Let's Connect</h2>
+            <div class="contact-grid">
 
-    <p class="footer-copy">
-        © 2026 Anirudh S K. All rights reserved.
-    </p>
+                <div class="contact-box">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anirudhsk555@gmail.com" target="_blank"
+                        class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>anirudhsk555@gmail.com</p>
+                    </a>
+                </div>
 
-</footer>
+                <div class="contact-box">
+                    <a href="tel:+91 9809173284" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+91 9809173284</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="https://www.linkedin.com/in/anirudh-s-k-23128b272/" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p>View Profile</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="https://github.com/anirudhsk01" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p>View Projects</p>
+                    </a>
+                </div>
+
+                <div class="contact-box">
+                    <a href="https://www.google.com/maps/place/Kerala,+India" target="_blank" class="contact-link">
+                        <i class="fas fa-location-dot"></i>
+                        <h4>Location</h4>
+                        <p>Kerala, India</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Anirudh S K. All rights reserved.</p>
+        </div>
+    </footer>
 
 
 </body>
+
 </html>
